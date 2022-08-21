@@ -237,6 +237,21 @@ background-color: #eaea20;
 margin-left: 15vmin;
 }
 
+.half-screen {
+    height: 50%;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.center-title {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dropbtn {
   background-color: #333;;
   color: white;
