@@ -1,0 +1,1 @@
+body,h1,html,p{margin:0}.full-screen,body,html{height:100%}h1,p{padding:0}header{position:fixed;top:10px;left:10px}section{text-align:center;color:#EFEFEF}.blue{display:flex;justify-content:center;align-items:center;background-color:#3883d8}.red{background-color:#cf3535}.orange{background-color:#ea6300}

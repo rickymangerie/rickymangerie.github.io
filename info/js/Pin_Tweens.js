@@ -1,0 +1,1 @@
+var controller;$(function(){controller=new ScrollMagic.Controller;TweenMax.to("#tween",.5,{backgroundColor:"red",color:"white"}),TweenMax.to("#pin2",.5,{backgroundColor:"red",color:"white"});var e=TweenMax.to(".inside2",.5,{transform:"scale(1.25)",ease:Linear.easeNone});new ScrollMagic.Scene({triggerElement:"#scene2",duration:200}).setPin("#pin2").setTween(e).addTo(controller)});
