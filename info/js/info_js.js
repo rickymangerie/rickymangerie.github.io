@@ -14,20 +14,20 @@ $(function() {
 
 });
 
-// remove any hashed hyperlink extensions from base URL
-$(function() {
+// // remove any hashed hyperlink extensions from base URL
+// $(function() {
 
-  setInterval(function () {
-    // remove fragment as much as it can go without adding an entry in browser history:
-    //window.location.replace("#");
+//   setInterval(function () {
+//     // remove fragment as much as it can go without adding an entry in browser history:
+//     //window.location.replace("#");
 
-    // slice off the remaining '#' in HTML5:    
-    if (typeof window.history.replaceState == 'function') {
-      history.replaceState({}, '', window.location.href.slice(0, -1));
-    }
-  }, 50);
+//     // slice off the remaining '#' in HTML5:    
+//     if (typeof window.history.replaceState == 'function') {
+//       history.replaceState({}, '', window.location.href.slice(0, -1));
+//     }
+//   }, 50);
 
-});
+// });
 
 // old function to hide the menu when a link was clicked
 // it now works when hovered away
@@ -49,8 +49,19 @@ $(function() {
 
 // }
 
-function removeExtraLink() {
-  
+// scrolls to the dropdown links without changing the URL or adding to history
+function scrollToAnchor(selectedAnchor) {
+  document.querySelector(selectedAnchor).scrollIntoView({
+      behavior: 'smooth'
+  });
+}
+
+// removes hashes (links) from base URL
+// not used currently as scrollToAnchor() solves this
+function removeHash(){
+  setTimeout(function(){
+      history.replaceState("", document.title, window.location.pathname);
+  }, 1);
 }
 
 
