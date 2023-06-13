@@ -39,11 +39,11 @@ function menuHide()
 // });
 
 
-
-$(document).on({
-  "touchstart": function (event) { menuHide(); },
-  "mouseup": function (event) { menuHide(); }
-});
+// code to try to get dropdown to disappear on mobile
+// $(document).on({
+//   "touchstart": function (event) { menuHide(); },
+//   "mouseup": function (event) { menuHide(); }
+// });
 
 // When the user scrolls down 20px from the top of the document, show the "Top" button
 window.onscroll = function() {scrollFunction()};
