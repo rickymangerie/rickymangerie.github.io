@@ -246,8 +246,8 @@ margin-left: 15vmin;
 }
 
 .dropdown {
-  z-index: 10000;
-  top: 0px;
+/*  z-index: 10000;
+  top: 0px;*/
   position: fixed;
   float: left;
   left: 0;
