@@ -285,7 +285,14 @@ margin-left: 15vmin;
 
 .dropdown-content a:hover {background-color: #ddd}
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover
+.dropdown-content {
+  display: block;
+}
+
+/* fixed the dropdown not appearing issue */
+.dropbtn:hover
+.dropdown-content {
   display: block;
 }
 

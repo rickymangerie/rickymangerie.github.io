@@ -17,9 +17,16 @@ $(function() {
 function menuHide()
 {
 
-  $(".dropdown-content").css("display", "none");
+  //$(".dropdown-content").css("display", "none");
+  $(".dropdown-content").hide();
+  // ensures that the dropdown box can reappear
+  setTimeout(function(){$(".dropdown-content").removeAttr('style');}, 300);
 
 }
+
+
+// function that fixed the dropdown not displaying issue
+// however, the dropdown would never go away (see above function for fix)
 
 // $(function(){
 
@@ -35,7 +42,7 @@ function menuHide()
 
 
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 20px from the top of the document, show the "Top" button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -46,7 +53,7 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// When the user clicks on the "Top" button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
