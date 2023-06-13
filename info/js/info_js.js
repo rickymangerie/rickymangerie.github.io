@@ -21,15 +21,15 @@ function menuHide()
 
 }
 
-$(function(){
+// $(function(){
 
-  $(".dropbtn").hover(function(){
+//   $(".dropbtn").hover(function(){
 
-    $(".dropdown-content").css("display", "block");
+//     $(".dropdown-content").css("display", "block");
 
-  });
+//   });
 
-});
+// });
 
 
 
