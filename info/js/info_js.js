@@ -22,11 +22,11 @@ function menuHide()
   // ensures that the dropdown box can reappear
   setTimeout(function(){$(".dropdown-content").removeAttr('style');}, 300);
 
-  //With a HTML class attribute. Example: <div class="BtMisDocumentos"></div>
-  $('.text').trigger('vclick');
-  $('.text').trigger('tap');
-  $('.text').trigger('touchstart');
-  $('.text').click();
+  //try to emulate click away on mobile
+  $('.overview').trigger('vclick');
+  $('.overview').trigger('tap');
+  $('.overview').trigger('touchstart');
+  $('.overview').click();
 
 }
 
@@ -46,6 +46,7 @@ function menuHide()
 
 
 // code to try to get dropdown to disappear on mobile
+// was glitchy and didn't work
 // $(document).on({
 //   "touchstart": function (event) { menuHide(); },
 //   "mouseup": function (event) { menuHide(); }
@@ -55,6 +56,7 @@ function menuHide()
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+  // hide the dropdown menu on scroll
   menuHide();
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       document.getElementById("myBtn").style.display = "block";
