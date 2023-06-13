@@ -40,13 +40,16 @@ function menuHide()
 
 
 
-
+$(document).on({
+  "touchstart": function (event) { menuHide(); },
+  "mouseup": function (event) { menuHide(); }
+});
 
 // When the user scrolls down 20px from the top of the document, show the "Top" button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  $(".dropdown-content").hide();
+  menuHide();
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       document.getElementById("myBtn").style.display = "block";
   } else {
