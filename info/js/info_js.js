@@ -22,6 +22,12 @@ function menuHide()
   // ensures that the dropdown box can reappear
   setTimeout(function(){$(".dropdown-content").removeAttr('style');}, 300);
 
+  //With a HTML class attribute. Example: <div class="BtMisDocumentos"></div>
+  $('.text').trigger('vclick');
+  $('.text').trigger('tap');
+  $('.text').trigger('touchstart');
+  $('.text').click();
+
 }
 
 
