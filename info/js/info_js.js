@@ -14,6 +14,10 @@ $(function() {
 
 });
 
+// old function to hide the menu when a link was clicked
+// it now works when hovered away
+// however, you do have to scroll on mobile to get dropdown to go away
+
 // function menuHide()
 // {
 
