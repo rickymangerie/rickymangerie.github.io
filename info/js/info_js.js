@@ -14,21 +14,21 @@ $(function() {
 
 });
 
-function menuHide()
-{
+// function menuHide()
+// {
 
-  //$(".dropdown-content").css("display", "none");
-  $(".dropdown-content").hide();
-  // ensures that the dropdown box can reappear
-  setTimeout(function(){$(".dropdown-content").removeAttr('style');}, 300);
+//   //$(".dropdown-content").css("display", "none");
+//   $(".dropdown-content").hide();
+//   // ensures that the dropdown box can reappear
+//   setTimeout(function(){$(".dropdown-content").removeAttr('style');}, 300);
 
-  //try to emulate click away on mobile
-  $('.overview').trigger('vclick');
-  $('.overview').trigger('tap');
-  $('.overview').trigger('touchstart');
-  $('.overview').click();
+//   // //try to emulate click away on mobile
+//   // $('.overview').trigger('vclick');
+//   // $('.overview').trigger('tap');
+//   // $('.overview').trigger('touchstart');
+//   // $('.overview').click();
 
-}
+// }
 
 
 // function that fixed the dropdown not displaying issue
@@ -57,7 +57,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   // hide the dropdown menu on scroll
-  menuHide();
+  // menuHide();
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       document.getElementById("myBtn").style.display = "block";
   } else {
