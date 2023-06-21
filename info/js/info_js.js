@@ -15,6 +15,7 @@ $(function() {
 });
 
 // // remove any hashed hyperlink extensions from base URL
+
 // $(function() {
 
 //   setInterval(function () {
@@ -54,6 +55,8 @@ function scrollToAnchor(selectedAnchor) {
   document.querySelector(selectedAnchor).scrollIntoView({
       behavior: 'smooth'
   });
+  // Uncheck hamburger menu to make it close
+  document.getElementById("menu__toggle").checked = false;
 }
 
 // removes hashes (links) from base URL
@@ -89,6 +92,7 @@ function removeHash(){
 // When the user scrolls down 20px from the top of the document, show the "Top" button
 window.onscroll = function() {scrollFunction()};
 
+// make the "Top" button appear when scrolled far enough down the page
 function scrollFunction() {
   // hide the dropdown menu on scroll
   // menuHide();
@@ -100,6 +104,7 @@ function scrollFunction() {
 }
 
 // When the user clicks on the "Top" button, scroll to the top of the document
+// unused, now incorporated in the scrollToAnchor() function
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera

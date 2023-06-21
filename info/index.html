@@ -23,6 +23,8 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2b5797">
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="apple-mobile-web-app-title" content="Mangerie">
 	<meta name="application-name" content="Mangerie">
 	<meta name="msapplication-TileColor" content="#2b5797">
@@ -38,7 +40,20 @@
 
 <body>
 
-	<br>
+	<div class="hamburger-menu" id="page_top">
+	    <input id="menu__toggle" type="checkbox" />
+	    <label class="menu__btn" for="menu__toggle">
+	      <span></span>
+	    </label>
+
+	    <ul class="menu__box">
+	      <li><a class="menu__item" onclick="scrollToAnchor('#Technical')">Technical</a></li>
+	      <li><a class="menu__item" onclick="scrollToAnchor('#Experience')">Experience</a></li>
+	      <li><a class="menu__item" onclick="scrollToAnchor('#Academics')">Academics</a></li>
+	      <li><a class="menu__item" onclick="scrollToAnchor('#Personal')">Personal</a></li>
+	      <li><a class="menu__item" onclick="scrollToAnchor('#Links')">Links</a></li>
+	    </ul>
+	  </div>
 
 	<div style="align-items: center; justify-content: center; display: flex">
 
@@ -57,6 +72,7 @@
 
 	</div>
 
+	<!-- Old Dropdown Menu
 	<div class="dropdown">
 
 		<button id="dropbtn" class="dropbtn">Menu</button>
@@ -72,8 +88,9 @@
 		</div>
 
 	</div>
+	-->
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="scrollToAnchor('#page_top')" id="myBtn" title="Go to top">Top</button>
 
 
 
@@ -585,7 +602,7 @@
 
 <hr class="hr-gold">
 
-<p id="updated">Last updated June 13 2023</p>
+<p id="updated">Last updated June 21 2023</p>
 
 </body>
 </html>
